@@ -1,0 +1,29 @@
+#my-name {
+    border: 1px solid black;
+    text-align: center;
+    background: teal
+}
+
+#project-cards{
+    display: flex;
+
+}
+
+.card{
+    flex-grow: 1;
+    flex-basis: 1px;
+    
+    max-width: 20%;
+    box-shadow: 2px 2px 5px;
+    margin: 12px;
+    padding: 24px;
+    padding-top: 10px;
+
+}
+footer {
+    position: absolute;
+    width:100vw;
+    border: 1px solid black;
+    text-align:center;
+    bottom: 0;
+}
