@@ -1,0 +1,8 @@
+Sentiment(polarity=0.0, subjectivity=0.0),Yay!
+
+Sentiment(polarity=0.0, subjectivity=0.0),Nay!
+
+Sentiment(polarity=1.0, subjectivity=0.75),I feel great!
+
+Sentiment(polarity=-0.9999999999999999, subjectivity=1.0),I feel stupid!
+

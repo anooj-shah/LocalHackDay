@@ -14,7 +14,7 @@ def sms_ahoy_reply():
     #date = request.args.get("time")
 
     with open('feelings.csv', 'a', newline='\n') as csvfile:
-        feeling_writer = csv.writer(csvfile, delimiter=',')
+        feeling_writer = csv.writer(csvfile, delimiter='�')
         feeling_writer.writerow([datetime.now()] + [message])
 
     print("Added to CSV!")

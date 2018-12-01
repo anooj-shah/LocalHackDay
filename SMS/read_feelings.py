@@ -14,9 +14,8 @@ infile = open("feelings.csv", 'r')
 #Place into the respective list
 
 for line in infile:
-
     print(line)
-    data = line.split(',')
+    data = line.split('�')
     full_time = data[0]
     date = (full_time[5:7] + "-" + full_time[9:10] + "-" + full_time[:4])
     hour = (full_time[11:13])
