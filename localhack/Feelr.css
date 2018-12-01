@@ -43,6 +43,12 @@ body {
   border: 2px solid cadetblue;
   box-shadow: 1px 5px 5px 1px grey;
 }
+@media only screen and (max-device-width: 768px) {
+  .smaller-image {
+    width:85vw;
+    height:50vh;
+  }
+}
 .language-icons {
   font-size: 75px;
 }
@@ -110,4 +116,5 @@ body {
 .col-sm{
   padding-bottom:3vh;
 }
+
 
