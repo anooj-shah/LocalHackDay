@@ -1,4 +1,6 @@
 from flask import Flask, request
+import csv
+from datetime import datetime
 from twilio.twiml.messaging_response import MessagingResponse
 from twilio.rest import Client
 app = Flask(__name__)
@@ -9,7 +11,15 @@ def sms_ahoy_reply():
     # Start our response
     resp = MessagingResponse()
     message = request.args.get('Body')
-    print(message)
+    #date = request.args.get("time")
+
+    with open('feelings.csv', 'a', newline='\n') as csvfile:
+        feeling_writer = csv.writer(csvfile, delimiter=',')
+        feeling_writer.writerow([datetime.now()] + [message])
+
+    print("Added to CSV!")
+
+
     # Add a message
     resp.message("Ahoy! Thanks so much for your message.")
 
