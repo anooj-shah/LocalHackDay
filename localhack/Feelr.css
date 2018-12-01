@@ -1,0 +1,108 @@
+@import url(https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed);
+html,
+body {
+  background-image: url("https://res.cloudinary.com/dg9sjnixv/image/upload/o_49/v1543685852/dawn-dusk-hd-wallpaper-149246.jpg");
+  height: 100vh;
+  width: 100%;
+  background-attachment: fixed;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  scroll-behavior: smooth;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  overflow-x: hidden;
+}
+@media only screen and (max-device-width: 768px) {
+  html,
+  body {
+    overflow-x: visible;
+  }
+}
+.navbar {
+  margin-bottom: 0;
+  border-radius: 0;
+}
+.parallax1 {
+  background-image: url("https://res.cloudinary.com/dg9sjnixv/image/upload/v1543685852/dawn-dusk-hd-wallpaper-149246.jpg");
+  background-attachment: fixed;
+  height: 100vh;
+  width: 100vw;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media only screen and (max-device-width: 768px) {
+  .parallax1 {
+    background-attachment: scroll;
+  }
+}
+.smaller-image {
+  width: 180px;
+  border-radius: 25%;
+  top: 200px;
+  border: 2px solid cadetblue;
+  box-shadow: 1px 5px 5px 1px grey;
+}
+.language-icons {
+  font-size: 75px;
+}
+.contact-icons {
+  font-size: 120px;
+}
+.blocktext {
+  margin: 5px auto;
+  margin-top: -10px;
+  font-size: 25px;
+  max-width: 600px;
+  display: block;
+}
+@media screen and (max-width: 500px) {
+  .blocktext {
+    font-size: 16px;
+    width: 85vw;
+    margin: 5px auto;
+    display: block;
+  }
+}
+.outer {
+  display: table;
+  height: 100vh;
+  width: 100%;
+}
+.middle {
+  display: table-cell;
+  vertical-align: middle;
+}
+.inner {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 60px;
+}
+.name {
+  font-size: 75px;
+  text-shadow: 0.5px 2px black;
+  color: white;
+  padding-top: 50vh;
+  padding-left: 10vw;
+}
+
+@media screen and (max-width: 578px) {
+  .name {
+    font-size: 50px;
+    width: 85vw;
+    padding-left: 15vw;
+    padding-top: 54vh;
+  }
+}
+
+.titles {
+  font-size: 75px;
+}
+
+@media screen and (max-width: 578px) {
+  .titles {
+    font-size: 50px;
+    width: 85vw;
+    text-align: center;
+  }
+}
