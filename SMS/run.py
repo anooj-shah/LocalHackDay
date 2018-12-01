@@ -25,5 +25,9 @@ def sms_ahoy_reply():
 
     return str(resp)
 
+@app.route("/message", methods=['GET','POST'])
+def ios_message():
+    return str("Works!")
+
 if __name__ == "__main__":
     app.run(debug=True)
