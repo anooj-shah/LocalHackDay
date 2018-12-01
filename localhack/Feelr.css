@@ -37,8 +37,8 @@ body {
   }
 }
 .smaller-image {
-  width: 180px;
-  border-radius: 25%;
+  width: 50vw;
+  height:50vh;
   top: 200px;
   border: 2px solid cadetblue;
   box-shadow: 1px 5px 5px 1px grey;
@@ -91,7 +91,7 @@ body {
     font-size: 50px;
     width: 85vw;
     padding-left: 15vw;
-    padding-top: 54vh;
+    padding-top: 25vh;
   }
 }
 
@@ -106,3 +106,7 @@ body {
     text-align: center;
   }
 }
+.col-sm{
+  padding-bottom:3vh;
+}
+
