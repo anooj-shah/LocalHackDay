@@ -94,13 +94,25 @@ body {
 
 @media screen and (max-width: 578px) {
   .name {
-    font-size: 50px;
+    font-size: 100px;
     width: 85vw;
     padding-left: 15vw;
     padding-top: 25vh;
   }
 }
-
+.subname{
+  font-size: 50px;
+  text-shadow: 0.5px 2px black;
+  color: white;
+  padding-left: 10vw;
+}
+@media screen and (max-width: 578px) {
+  .subname {
+    font-size: 30px;
+    width: 85vw;
+    padding-left: 15vw;
+  }
+}
 .titles {
   font-size: 75px;
   padding-top:5vh;
@@ -116,5 +128,4 @@ body {
 .col-sm{
   padding-bottom:3vh;
 }
-
 
