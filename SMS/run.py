@@ -21,7 +21,7 @@ def sms_ahoy_reply():
 
 
     # Add a message
-    resp.message("Ahoy! Thanks so much for your message.")
+    resp.message("Thank's for sharing with feelr :)")
 
     return str(resp)
 
