@@ -97,6 +97,7 @@ body {
 
 .titles {
   font-size: 75px;
+  padding-top:5vh;
 }
 
 @media screen and (max-width: 578px) {
