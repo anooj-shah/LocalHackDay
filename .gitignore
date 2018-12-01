@@ -1,1 +1,6 @@
 */SMS/env/
+SMS/env/.DS_Store
+SMS/env/.Python
+SMS/env/bin/activate
+SMS/env/bin/activate.csh
+SMS/env/*
