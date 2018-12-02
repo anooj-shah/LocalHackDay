@@ -18,11 +18,11 @@ def run():
         print(line)
         data = line.split('�')
         full_time = data[0]
-        date = (full_time[5:7] + "-" + full_time[9:10] + "-" + full_time[:4])
-        hour = (full_time[11:13])
+        #date = (full_time[5:7] + "-" + full_time[9:10] + "-" + full_time[:4])
+        #hour = (full_time[11:13])
         blob = TextBlob(data[1])
 
-        output_list.append((date, hour, blob.sentiment.polarity))
+        output_list.append((blob.sentiment.polarity))
         QC_list.append((blob.sentiment, data[1]))
     infile.close()
 
@@ -31,7 +31,7 @@ def run():
     #This CSV is used for the visualization on the web interface
     outfile = open("output.csv", 'w')
     for item in output_list:
-        outfile.write(item[0]+","+item[1]+","+str(item[2])+"\n")
+        outfile.write(str(item)+"\n")
     outfile.close()
 
     #Wirte a file for QC

@@ -1,2 +1,4 @@
-Sentiment(polarity=0.125, subjectivity=0.4),I am still alive!
+Sentiment(polarity=0.125, subjectivity=0.4),I am alive!
+
+Sentiment(polarity=0.0, subjectivity=0.0),C
 
