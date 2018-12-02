@@ -36,6 +36,6 @@ $(function() {
 });
 function setPicture() {
   var img = document.getElementById("dropdown");
-  var value = img.options[img.selectedIndex].value;
-  alert(value);
+  var src = img.options[img.selectedIndex].src;
+  alert(src);
 }
