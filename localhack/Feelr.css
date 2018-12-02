@@ -37,8 +37,8 @@ body {
   }
 }
 .smaller-image {
-  width: 50vw;
-  height:50vh;
+  width: 75vw;
+  height:75vh;
   top: 200px;
   border: 2px solid cadetblue;
   box-shadow: 1px 5px 5px 1px grey;
@@ -46,7 +46,7 @@ body {
 @media only screen and (max-device-width: 768px) {
   .smaller-image {
     width:85vw;
-    height:50vh;
+    height:45vh;
   }
 }
 .language-icons {
