@@ -38,15 +38,15 @@ body {
 }
 .smaller-image {
   width: 50vw;
-  height:50vh;
+  height: 50vh;
   top: 200px;
   border: 2px solid cadetblue;
   box-shadow: 1px 5px 5px 1px grey;
 }
 @media only screen and (max-device-width: 768px) {
   .smaller-image {
-    width:85vw;
-    height:50vh;
+    width: 85vw;
+    height: 50vh;
   }
 }
 .language-icons {
@@ -100,7 +100,7 @@ body {
     padding-top: 25vh;
   }
 }
-.subname{
+.subname {
   font-size: 50px;
   text-shadow: 0.5px 2px black;
   color: white;
@@ -115,7 +115,7 @@ body {
 }
 .titles {
   font-size: 75px;
-  padding-top:5vh;
+  padding-top: 5vh;
 }
 
 @media screen and (max-width: 578px) {
@@ -125,7 +125,6 @@ body {
     text-align: center;
   }
 }
-.col-sm{
-  padding-bottom:3vh;
+.col-sm {
+  padding-bottom: 3vh;
 }
-
