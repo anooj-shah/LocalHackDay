@@ -96,8 +96,8 @@ def pie_chart(name, negative = 0, postive = 0, neutral = 0): #format as pos, neg
 
 def run_all():
     part_1()
-    pie_chart('day1.png',35,35,35)
-    pie_chart('day2.png',34,48,22)
+    #pie_chart('day1.png',35,35,35)
+#pie_chart('day2.png',34,48,22)
     #pie_chart('day3.png',34,48,22)
     #pie_chart('day4.png',100,120,80)
     #pie_chart('day5.png',34,48,22)

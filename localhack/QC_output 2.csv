@@ -1,0 +1,14 @@
+Sentiment(polarity=0.0, subjectivity=0.0),Hello world!
+
+Sentiment(polarity=1.0, subjectivity=1.0),I am SOOOO happy!
+
+Sentiment(polarity=0.0, subjectivity=0.0),Hello!
+
+Sentiment(polarity=0.0, subjectivity=0.0),Hey y'all!
+
+Sentiment(polarity=-1.0, subjectivity=0.9),I hate everything!
+
+Sentiment(polarity=0.0, subjectivity=0.0),Hehe
+
+Sentiment(polarity=0.0, subjectivity=0.0),Test!
+

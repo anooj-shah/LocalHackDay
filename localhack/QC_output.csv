@@ -6,3 +6,19 @@ Sentiment(polarity=0.0, subjectivity=0.0),Hello!
 
 Sentiment(polarity=0.0, subjectivity=0.0),Hey y'all!
 
+Sentiment(polarity=-1.0, subjectivity=0.9),NO way I hate everything!
+
+Sentiment(polarity=1.0, subjectivity=1.0),I am SOOOO happy!
+
+Sentiment(polarity=0.0, subjectivity=0.0),
+
+Sentiment(polarity=0.0, subjectivity=0.0),Hello!
+
+Sentiment(polarity=0.0, subjectivity=0.0),Ughhhhh.
+
+Sentiment(polarity=0.5, subjectivity=0.6),I love life
+
+Sentiment(polarity=0.0, subjectivity=0.0),still works!
+
+Sentiment(polarity=-1.0, subjectivity=0.9),I hate everything!
+
