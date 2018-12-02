@@ -1,2 +1,2 @@
-Hello
-Also uses SMS folder in previous directory
+Hello!
+This also uses SMS folder in previous directory.
