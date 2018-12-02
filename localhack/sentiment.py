@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt, mpld3
 
 # open file
 reader = []
-file = open('test.csv','r')
+file = open('output.csv','r')
 reader = list(file)
 print(reader)
 
