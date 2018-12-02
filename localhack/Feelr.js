@@ -32,5 +32,10 @@ $('a[href^="#"]').on("click", function(event) {
   }
 });
 $(function() {
-  $(".col-sm-6").matchHeight();
+  $(".col-sm").matchHeight();
 });
+function setPicture() {
+  var img = document.getElementById("dropdown");
+  var value = img.options[img.selectedIndex].value;
+  alert(value);
+}
