@@ -21,6 +21,7 @@ def run():
         date = (full_time[5:7] + "-" + full_time[9:10] + "-" + full_time[:4])
         hour = (full_time[11:13])
         blob = TextBlob(data[1])
+
         output_list.append((date, hour, blob.sentiment.polarity))
         QC_list.append((blob.sentiment, data[1]))
     infile.close()

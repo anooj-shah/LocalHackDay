@@ -14,7 +14,7 @@ def sms_ahoy_reply():
     feelings_response = request.args.get('Body')
     append_message(feelings_response)
     # Add a message
-    resp.message("Thank's for sharing with feelr :)")
+    resp.message(feelings_response)
 
     return str(resp)
 
@@ -29,7 +29,7 @@ def append_message(message):
     with open('feelings.csv', 'a', newline='\n') as csvfile:
         feeling_writer = csv.writer(csvfile, delimiter='�')
         feeling_writer.writerow([datetime.now()] + [message])
-    read_feelings.run
+    read_feelings.run()
 
 if __name__ == "__main__":
     app.run(debug=True)
