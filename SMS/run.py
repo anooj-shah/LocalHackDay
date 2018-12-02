@@ -3,6 +3,7 @@ import csv
 from datetime import datetime
 from twilio.twiml.messaging_response import MessagingResponse
 from twilio.rest import Client
+import read_feelings
 app = Flask(__name__)
 
 @app.route("/sms", methods=['GET', 'POST'])
@@ -28,6 +29,7 @@ def append_message(message):
     with open('feelings.csv', 'a', newline='\n') as csvfile:
         feeling_writer = csv.writer(csvfile, delimiter='�')
         feeling_writer.writerow([datetime.now()] + [message])
+    read_feelings.run
 
 if __name__ == "__main__":
     app.run(debug=True)
