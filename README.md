@@ -1,2 +1,2 @@
 # anooj-shah.github.io
-website in testing
+use localhack and SMS folders
