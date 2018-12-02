@@ -37,5 +37,5 @@ $(function() {
 function setPicture() {
   var img = document.getElementById("dropdown");
   var src = img.options[img.selectedIndex].src;
-  alert(src);
+  display(src);
 }
