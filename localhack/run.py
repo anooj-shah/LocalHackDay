@@ -30,6 +30,7 @@ def append_message(message):
         feeling_writer = csv.writer(csvfile, delimiter='�')
         feeling_writer.writerow([datetime.now()] + [message])
     read_feelings.run()
+    #sentiment.run_all()
 
 if __name__ == "__main__":
     app.run(debug=True)
