@@ -42,6 +42,8 @@ body {
   top: 200px;
   border: 2px solid cadetblue;
   box-shadow: 1px 5px 5px 1px grey;
+  padding-left:10px;
+  padding-right:10px;
 }
 @media only screen and (max-device-width: 768px) {
   .smaller-image {
