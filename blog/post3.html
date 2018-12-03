@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Tech4All</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- Custom styles for this template -->
+    <link href="css/clean-blog.min.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">Tech4All</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          Menu
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="post.html">Featured</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="masthead" style="background-image: url('img/post-bg.jpg')">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <div class="post-heading">
+              <h1>Feelr - an artificial intelligence tool to track mental health using sentiment analysis</h1>
+              <h2 class="subheading">.</h2>
+              <span class="meta">Posted by
+                <a href="#">Anooj Shah</a>
+                on December 1, 2018</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Post Content -->
+    <article>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <h2 class="section-heading">Introduction and Motivation</h2>
+            <p>Mental Health has been affecting over 450 million people worldwide. Over the recent years, awareness of mental health issues have been growing, and the stigma associated with discussing mental health issues is beginning to fade away. This issue is finally getting some light. Allowing more research to happen in this field.
+              </p>
+            <p>At the MLH local hack day hackathon, my group and I chose to build something in this field because we feel that we would be impacting approximately one fourth of the world population, and many people in the room. </p>
+              <p>Before I get started, I would like to thank my hardworking team; it is amazing to see what we could do in 12 hours. <br><br>Meet the Team:
+                  <br>
+                  - Anooj <br>
+                  - Lucas <br>
+                  - Jennifer <br>
+                  - Kari </p></p>
+              
+            <p>My team decided to use sentiment analysis to analyze user input. We used twilio's API to be able to send text messages to a bot who asked to share your feelings. We then sent this data (timestamps and text messages) to a python package called TextBlog (a tool for Natural Language Processing). With this, a sentiment score (polarity) was calcualted. We used matplotlib to plot this data live and showed the various plots on a webpage.
+                  <br>
+                  Webpage for data visualization: https://anooj-shah.github.io/localhack/ <br>
+                The resources we used include the following
+                <br>
+                - https://en.wikipedia.org/wiki/Sentiment_analysis<br>
+                - https://textblob.readthedocs.io/en/dev/quickstart.html#quickstart<br>
+                - https://planspace.org/20150607-textblob_sentiment/<br>
+                - https://www.lexalytics.com/technology/sentiment<br></p>
+
+            <p>The Project and the Plan<br>
+                Our team wanted to develop a mental health application. In this step I am reading a csv of timestamps and text as a list. This information is being passed through TextBlob to run sentiment analysis. The output is written to a CSV for processing by data visualization team.
+                <br>
+                
+              <p>A quick explanation of TextBlob from https://planspace.org/20150607-textblob_sentiment/ <br>
+                  Each word in the lexicon has scores for:<br>
+                  
+                  polarity: negative vs. positive (-1.0 => +1.0)<br>
+                  subjectivity: objective vs. subjective (+0.0 => +1.0)<br></p>
+                  <h2 class="section-heading">Sentiment Analysis with Python Notebook</h2>
+
+
+
+            <p>In the planning stages, we decided that we would generate a CSV of two columns, time stamp and user input string. We generated a dummy_input.csv for testing using various random news articles and Reddit posts. We also used pop songs as quality control. In this step we read the CSV input and parsed it to the TextBlob library.</p>
+            <p>This is an example of how the data is being processed:<br>
+
+                </p>
+            <blockquote class="blockquote">for item in QC_list:<br>
+              &nbsp &nbsp &nbsp &nbsp print(str(item[0])+","+str(item[1])+"\n")</blockquote>
+              <p>Output:</p>
+              <blockquote class="blockquote">Sentiment(polarity=1.0, subjectivity=0.75),I feel great!<br>
+
+                Sentiment(polarity=0.0, subjectivity=0.0),Today I got passed over for a promotion ðŸ˜”<br>
+                
+                Sentiment(polarity=0.55, subjectivity=0.875),Wow today is great!<br>
+                
+                Sentiment(polarity=0.0, subjectivity=0.0),Rest In Peace my GPA<br>
+                
+                Sentiment(polarity=0.2676136363636364, subjectivity=0.6636363636363637),I got a new job! I'm so happy I can finally leave my old place.<br>
+                
+                Sentiment(polarity=-0.20454545454545456, subjectivity=0.5959595959595959),First day in the job was well yikes. The traffic was terrible and my new boss hates me.<br>
+                
+                Sentiment(polarity=0.5, subjectivity=0.6),Day two on the job I learned how to sneak snacks into my cubicle. I love eating candy all day<br>
+                
+                Sentiment(polarity=0.5, subjectivity=0.6),I love puppies<br>
+                
+                Sentiment(polarity=0.5792857142857142, subjectivity=0.7428571428571427),When you were here before Couldn't look you in the eye You're just like an angel Your skin makes me cry You float like a feather In a beautiful world I wish I was special You're so fucking special  But I'm a creep I'm a weirdo What the hell am I doing here? I don't belong here  I don't care if it hurts I want to have control I want a perfect body I want a perfect soul I want you to notice When I'm not around </blockquote>
+            <p>Here is an example of how the data looks when processed for visualization:           </p>
+            <blockquote class="blockquote">for item in output_list:
+                &nbsp &nbsp &nbsp &nbsp print(str(item[0])+","+str(item[1])+","+str(item[2]))<br></blockquote>
+            <p>Output: </p>
+            <blockquote class="blockquote">11-1-2018,3,-0.4445565591688916
+                11-2-2018,3,0.9244531945645638 <br>
+                11-3-2018,10,0.6689143022684716 <br>
+                11-4-2018,17,0.8308197675024411 <br>
+                11-5-2018,19,-0.14348502563002308 <br>
+                11-6-2018,4,-0.21406216979890003 <br>
+                11-7-2018,9,-0.29918519527402276 <br>
+                11-8-2018,16,-0.23807184305270157 <br>
+                11-9-2018,19,0.2921593021551492 <br>
+                11-10-2018,22,0.9281803447082064 <br>
+                11-11-2018,13,0.9102256139090921 <br>
+                11-12-2018,13,0.11714507243346661<br>
+                11-13-2018,14,0.3868305688271392<br>
+                11-14-2018,22,-0.9469808940360427<br>
+                11-15-2018,22,-0.41005185863381466<br>
+                11-16-2018,9,-0.13009929906427686<br>
+                11-17-2018,17,-0.3674145640081907<br>
+                11-18-2018,4,0.7655305400854644<br>
+                11-19-2018,0,-0.9661020337690942<br>
+                11-20-2018,15,0.705257223210707<br>
+                11-21-2018,23,-0.5399866821023354<br>
+                11-22-2018,20,0.703388130345119<br>
+                11-23-2018,22,-0.27985859371032373<br>
+                11-24-2018,0,-0.49414554001010114<br>
+                11-25-2018,13,0.34958063157936503<br>
+                11-26-2018,21,-0.7533300704940467<br>
+                11-27-2018,10,-0.9240558979892479<br>
+                11-28-2018,17,-0.058131714905995<br>
+                11-29-2018,3,-0.10466763988808614<br></blockquote>
+                <h2 class="section-heading">Conclusion:</h2>
+                <p>My team and I have surely not solved the issue of mental health, but we believe this solution has room for improvement as well. One area of consideration is training the TextBlog to catch certain edge cases from learning speech patterns from person to person. For example, if a person uses negative words on a daily basis repeatedly, this most likely means that this person just uses this word a lot and may show no indication of a negative sentiment score.  </p>
+
+            <!--
+            <p>Spaceflights cannot be stopped. This is not the work of any one man or even a group of men. It is a historical process which mankind is carrying out in accordance with the natural laws of human development.</p>
+
+
+            <p>As we got further and further away, it [the Earth] diminished in size. Finally it shrank to the size of a marble, the most beautiful you can imagine. That beautiful, warm, living object looked so fragile, so delicate, that if you touched it with a finger it would crumble and fall apart. Seeing this has to change a man.</p>
+           
+            <a href="#">
+              <img class="img-fluid" src="img/post-sample-image.jpg" alt="">
+            </a>
+            <span class="caption text-muted">To go places and do things that have never been done before – that’s what living is all about.</span>
+
+            <p>Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds, to seek out new life and new civilizations, to boldly go where no man has gone before.</p>
+
+            <p>As I stand out here in the wonders of the unknown at Hadley, I sort of realize there’s a fundamental truth to our nature, Man must explore, and this is exploration at its greatest.</p>
+
+            <p>Placeholder text by
+              <a href="http://spaceipsum.com/">Space Ipsum</a>. Photographs by
+              <a href="https://www.flickr.com/photos/nasacommons/">NASA on The Commons</a>.</p> -->
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <hr>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <ul class="list-inline text-center">
+              <li class="list-inline-item">
+                <a href="#">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+            </ul>
+            <p class="copyright text-muted">Copyright &copy; Tech4All 2018</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/clean-blog.min.js"></script>
+
+  </body>
+
+</html><br><br><br>
